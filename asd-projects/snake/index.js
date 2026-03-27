@@ -83,7 +83,7 @@ function update() {
   }
 }
 
-function checkForNewDirection(event) {
+function checkForNewDirection() {
   /* 
   TODO 7: Update snake.head.direction based on the value of activeKey.
   
@@ -105,10 +105,11 @@ function checkForNewDirection(event) {
   }
   // FILL IN THE REST
 
-   console.log(snake.head.direction);     // uncomment me!
+  console.log(snake.head.direction); // uncomment me!
 }
 
 function moveSnake() {
+  
   /* 
     TODO 10: Move each part of the snake's body such that it's body follows the head.
     
@@ -123,7 +124,15 @@ function moveSnake() {
 
   /* 
     TODO 8: determine the next row and column for the snake's head
-    
+     if (snake.head.direction === "left") {
+        snake.head.column = snake.head.column - 1;
+    } else if (snake.head.direction === "right") {
+        snake.head.column = snake.head.column + 1;
+    } else if (snake.head.direction === "up") {
+        snake.head.row = snake.head.row - 1;
+    } else if (snake.head.direction === "down") {
+        snake.head.row = snake.head.row + 1;
+    }
     HINT: The snake's head will need to move forward 1 square based on the value
     of snake.head.direction which may be one of "left", "right", "up", or "down"
   */
